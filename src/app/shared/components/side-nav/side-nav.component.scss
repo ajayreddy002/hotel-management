@@ -1,0 +1,123 @@
+.sidenav-container {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.logo {
+    color: #0266b4;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 20px;
+    font-size: 18px;
+
+    img {
+        height: 50px;
+    }
+}
+
+.sidenav {
+    width: 200px;
+    // box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+    background: #ffffff;
+    border: none;
+}
+
+.sidenav .mat-toolbar {
+    background: #ffffff;
+}
+
+.anchor_link {
+    a {
+        color: #0266b4;
+        font-family: 'Raleway', sans-serif;
+        line-height: 20px;
+        font-weight: 500;
+        font-size: 15px;
+
+        img {
+            height: auto;
+            width: 20px;
+            margin-right: 10px;
+        }
+    }
+
+    .active {
+        color: #ff3366 !important;
+    }
+}
+
+.mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: #FEFEFF;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+}
+
+.content_container {
+    background: #F4F5F7;
+}
+
+.header_cont {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: #FEFEFF;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+
+    button {
+        outline: none;
+        color: #ff3366;
+    }
+
+    .input_block {
+
+        //   margin-left: 35px;
+        span {
+            position: absolute;
+            padding: 7px 5px 0 15px;
+
+            i {
+                font-size: 22px;
+                color: #545557a8;
+            }
+        }
+
+        input {
+            width: 350px;
+            background: #F4F5F7;
+            border: 1px solid #dbdee2;
+            border-radius: 10px;
+            padding-left: 40px;
+            outline: none;
+            color: #8a8b8ea8;
+            font-size: 15px;
+            font-family: 'Quicksand', sans-serif;
+        }
+    }
+
+    .notify_block {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-left: auto !important;
+        padding-right: 25px;
+
+        .notify_img,
+        .email_img {
+            img {
+                height: 20px;
+                cursor: pointer;
+                padding-left: 15px;
+            }
+        }
+    }
+}
+
+.signout_menu {
+    display: flex;
+    flex-direction: row;
+}

@@ -1,0 +1,34 @@
+.dash_board {
+    padding-top: 25px;
+    .card_main_block {
+        padding-bottom: 20px;
+    }
+    .img_block {
+        img {
+            height: 50px;
+        }
+    }
+    .content_block {
+        text-align: center;
+    }
+    .card_block {
+        background: #0266b4;
+        cursor: pointer;
+        mat-card-title {
+            color: #ffffff;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            font-size: 25px;
+            text-align: left;
+        }
+        mat-card-content {
+            color: #ffffff;
+            line-height: 20px;
+            font-size: 16px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-top: 15px;
+        }
+    }
+}

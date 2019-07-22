@@ -1,0 +1,73 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)">
+    <mat-toolbar class="logo">
+      <!-- <img src="../../../../assets/imges/icons/open-book.svg" alt=""> -->
+      E Shiksha
+    </mat-toolbar>
+    <mat-nav-list class="anchor_link">
+      <a routerLinkActive="active" mat-list-item routerLink="/home/dashboard">
+        <img src="../../../../assets/imges/icons/dashboard.svg" alt=""> Dashboard
+      </a>
+      <a mat-list-item routerLink="/home/bookings" routerLinkActive="active">
+        <img src="../../../../assets/imges/icons/gear.svg" alt="">Settings
+      </a>
+      <a mat-list-item routerLink="/home/bookings" routerLinkActive="active">
+        <img src="../../../../assets/imges/icons/hr-icon.svg" alt="">Hr & Payroll
+      </a>
+      <a mat-list-item routerLink="/home/bookings" routerLinkActive="active">
+        <img src="../../../../assets/imges/icons/classroom.svg" alt="">Class Rooms
+      </a>
+      <a mat-list-item routerLink="/home/bookings" routerLinkActive="active">
+        <img src="../../../../assets/imges/icons/management.svg" alt="">Management
+      </a>
+      <a mat-list-item routerLink="/home/bookings" routerLinkActive="active">
+        <img src="../../../../assets/imges/icons/education.svg" alt="">Schools
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="content_container">
+    <mat-toolbar class="header_cont">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <div class="row">
+        <!-- <div class="col-6">
+          <div class="input_block">
+            <span><i class="material-icons">search</i></span>
+            <input type="text" placeholder="Serach Bookings">
+          </div>
+        </div> -->
+      </div>
+      <div class="notify_block">
+        <div class="email_img">
+          <img [matMenuTriggerFor]="emailMenu" src="../../../../assets/imges/icons/mail.svg" alt="">
+        </div>
+        <div class="notify_img">
+          <img [matMenuTriggerFor]="alertMenu" src="../../../../assets/imges/icons/notification.svg" alt="">
+        </div>
+        <div class="email_img">
+          <img [matMenuTriggerFor]="signOut" src="../../../../assets/imges/icons/user.svg" alt="">
+        </div>
+      </div>
+      <div class="menu_block">
+        <mat-menu #alertMenu="matMenu">
+            <p mat-menu-item>Alert 1</p>
+            <p mat-menu-item>Alert 1</p>
+        </mat-menu>
+        <mat-menu #emailMenu="matMenu">
+            <p mat-menu-item>Mail from someonw</p>
+            <p mat-menu-item>Mail from someonw</p>
+        </mat-menu>
+        <mat-menu #signOut="matMenu">
+          <div class="signout_menu">
+            <p mat-menu-item>Signout</p>
+            <p mat-menu-item>Profile</p>
+          </div>
+        </mat-menu>
+      </div>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
