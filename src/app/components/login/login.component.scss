@@ -1,0 +1,80 @@
+.main_block {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-image: linear-gradient(to right top, #0266b4, #0065ad, #0063a6, #02629f, #096098);
+
+    .login_block {
+        width: 400px;
+        background: #fff;
+        border-radius: 10px;
+        position: relative;
+        padding: 40px 60px 40px 60px;
+
+        .title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 30px;
+            color: #555555;
+            line-height: 1.2;
+            text-transform: uppercase;
+            text-align: center;
+            width: 100%;
+            display: block;
+            padding-bottom: 25px;
+        }
+
+        .login_form {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+
+        .input_block {
+            width: 100%;
+            background-color: #fff;
+            border-radius: 2px;
+            margin-bottom: 20px;
+
+            label {
+                font-size: 13px;
+                color: #555555;
+                line-height: 1.4;
+                text-transform: uppercase;
+                padding-bottom: 11px;
+            }
+
+            input {
+                color: #555555;
+                line-height: 1.2;
+                font-size: 18px;
+                display: block;
+                width: 100%;
+                background: transparent;
+                height: 45px;
+                padding: 0 25px 0 25px;
+                outline: none;
+                border: 1px solid #e6e6e6;
+                border-radius: 5px;
+            }
+        }
+        .btn_block {
+            text-align: center;
+            padding-top: 15px;
+            button {
+                padding: 8px 20px 10px 20px;
+                background: #0163a6;
+                border: none;
+                outline: none;
+                color: #fff;
+                border-radius: 5px;
+            }
+        }
+    }
+}

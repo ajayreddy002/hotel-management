@@ -3,8 +3,8 @@
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="!(isHandset$ | async)">
     <mat-toolbar class="logo">
-      <!-- <img src="../../../../assets/imges/icons/open-book.svg" alt=""> -->
-      E Shiksha
+      <img src="assets/imges/logo.png" alt="">
+      <!-- E Shiksha -->
     </mat-toolbar>
     <mat-nav-list class="anchor_link">
       <a routerLinkActive="active" mat-list-item routerLink="/home/dashboard">
@@ -12,6 +12,9 @@
       </a>
       <a mat-list-item routerLink="/home/bookings" routerLinkActive="active">
         <img src="../../../../assets/imges/icons/gear.svg" alt="">Settings
+      </a>
+      <a mat-list-item routerLink="/home/calendar" routerLinkActive="active">
+        <img src="../../../../assets/imges/icons/gear.svg" alt="">Calendar
       </a>
       <a mat-list-item routerLink="/home/bookings" routerLinkActive="active">
         <img src="../../../../assets/imges/icons/hr-icon.svg" alt="">Hr & Payroll

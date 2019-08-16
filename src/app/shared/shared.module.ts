@@ -5,9 +5,11 @@ import {
   MatToolbarModule, MatListModule, MatInputModule, MatButtonModule,
   MatIconModule, MatSidenavModule, MatFormFieldModule, MatSelectModule, MatMenuModule,
   MatCardModule,
-  MatTabsModule
+  MatTabsModule,
+  MatDialogModule
 } from '@angular/material';
 import { AttandenceChartComponent } from './components/attandence-chart/attandence-chart.component';
+import { FullCalendarModule } from '@fullcalendar/angular';
 @NgModule({
   declarations: [AttandenceChartComponent],
   imports: [
@@ -23,7 +25,9 @@ import { AttandenceChartComponent } from './components/attandence-chart/attanden
     MatSelectModule,
     MatMenuModule,
     MatCardModule,
-    MatTabsModule
+    MatTabsModule,
+    FullCalendarModule,
+    MatDialogModule
   ],
   exports: [
     LayoutModule,
@@ -38,7 +42,9 @@ import { AttandenceChartComponent } from './components/attandence-chart/attanden
     MatMenuModule,
     MatCardModule,
     MatTabsModule,
-    AttandenceChartComponent
+    AttandenceChartComponent,
+    FullCalendarModule,
+    MatDialogModule
   ]
 })
 export class SharedModule { }

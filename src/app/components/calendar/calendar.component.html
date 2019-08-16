@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="calendar_block">
+        <full-calendar #calendar [defaultView]="dayGridMonth" [events]="calendarEvents" [plugins]="calendarPlugins"
+            (dateClick)="handleDateClick($event)" (eventClick)="eventClick($event)" [eventLimit]="5" [height]="400">
+        </full-calendar>
+    </div>
+    <div class="events_block">
+        
+    </div>
+</div>
