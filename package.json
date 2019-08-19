@@ -31,15 +31,12 @@
     "@types/chart.js": "^2.7.55",
     "bootstrap": "^4.3.1",
     "chart.js": "^2.8.0",
-<<<<<<< HEAD
     "moment": "^2.24.0",
-=======
     "hammerjs": "^2.0.8",
->>>>>>> 50eafabd53d388cabed479d91376a2c7e8d8ef3e
     "rxjs": "~6.4.0",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1",
-     "express": "^4.16.1",
+     "express": "^4.16.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.800.0",
