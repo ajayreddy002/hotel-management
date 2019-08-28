@@ -11,6 +11,7 @@ const routes: Routes = [
     path: 'home', component: HomeComponent, children: [
       { path: 'dashboard', loadChildren: () => import('./components/dashboard/dashboard.module').then(mod => mod.DashboardModule) },
       { path: 'calendar', loadChildren: () => import('./components/calendar/calendar.module').then(mod => mod.CalendarModule) },
+      { path: 'hrpayroll', loadChildren: () => import('./components/hrpayroll/hrpayroll.module').then(mod => mod.HrpayrollModule)}
     ]
   },
 ];
@@ -20,3 +21,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
