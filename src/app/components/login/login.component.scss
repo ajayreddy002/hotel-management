@@ -64,17 +64,25 @@
                 border-radius: 5px;
             }
         }
-        .btn_block {
-            text-align: center;
-            padding-top: 15px;
-            button {
-                padding: 8px 20px 10px 20px;
-                background: #0163a6;
-                border: none;
-                outline: none;
-                color: #fff;
-                border-radius: 5px;
-            }
-        }
+    }
+}
+.btn_actions{
+    text-align: center;
+    button{
+        height: 40px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        color: #ffffff;
+        width: 90px;
+    }
+    .login-btn{
+        background-color: #0163a6;
+    }
+    .submit-btn{
+        background-color: #4dc26b;
+    }
+    button + button {
+        margin-left: 50px;
     }
 }
