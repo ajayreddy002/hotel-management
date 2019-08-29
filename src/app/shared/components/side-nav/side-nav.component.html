@@ -3,7 +3,7 @@
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="!(isHandset$ | async)">
     <mat-toolbar class="logo">
-      <img src="assets/imges/logo.png" alt="">
+      <img src="assets/imges/logos/main_logo.png" alt="">
 
     </mat-toolbar>
     <!-- <mat-nav-list class="anchor_link">
@@ -63,13 +63,18 @@
       </div>
       <div class="notify_block">
         <div class="email_img">
-          <img [matMenuTriggerFor]="emailMenu" src="../../../../assets/imges/icons/mail.svg" alt="">
-        </div>
-        <div class="notify_img">
-          <img [matMenuTriggerFor]="alertMenu" src="../../../../assets/imges/icons/notification.svg" alt="">
+          <img src="assets/imges/icons/serach.svg" alt="">
         </div>
         <div class="email_img">
-          <img [matMenuTriggerFor]="signOut" src="../../../../assets/imges/icons/user.svg" alt="">
+          <img [matMenuTriggerFor]="emailMenu" src="assets/imges/icons/mail_notify.svg" alt="">
+        </div>
+        <div class="notify_img">
+          <img [matMenuTriggerFor]="alertMenu" src="assets/imges/icons/notification.svg" alt="">
+        </div>
+        <div class="user_field" [matMenuTriggerFor]="signOut">
+          <span class="user_msg">Hi, </span>
+          <span class="user_name"> Ajay </span>
+          <!-- <img [matMenuTriggerFor]="signOut" src="../../../../assets/imges/icons/user.svg" alt=""> -->
         </div>
       </div>
       <div class="menu_block">
@@ -83,8 +88,7 @@
         </mat-menu>
         <mat-menu #signOut="matMenu">
           <div class="signout_menu">
-            <p mat-menu-item>Signout</p>
-            <p mat-menu-item>Profile</p>
+            <mat-card></mat-card>
           </div>
         </mat-menu>
       </div>
