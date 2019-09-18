@@ -1,3 +1,5 @@
+@import '~src/fonts.scss';
+
 .sidenav-container {
     height: 100%;
     position: fixed;
@@ -15,7 +17,7 @@
     font-size: 18px;
 
     img {
-        height: 75px;
+        height: 40px;
     }
 }
 
@@ -28,7 +30,7 @@
 
 .sidenav .mat-toolbar {
     background: #ffffff;
-    padding-top: 45px;
+    padding-top: 30px;
     padding-bottom: 30px;
 }
 
@@ -39,6 +41,7 @@
         line-height: 20px;
         font-weight: 500;
         font-size: 15px;
+        text-decoration: none;
 
         img {
             height: auto;
@@ -61,7 +64,7 @@
 }
 
 .content_container {
-    background: #F4F5F7;
+    background: #f0f1f3;
 }
 
 .header_cont {
@@ -103,17 +106,51 @@
     }
 
     .notify_block {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        display: flex;
         margin-left: auto !important;
         padding-right: 25px;
+        justify-content: space-between;
 
         .notify_img,
         .email_img {
             img {
-                height: 20px;
+                height: 25px;
                 cursor: pointer;
-                padding-left: 15px;
+                padding-left: 25px;
+                align-self: center;
+            }
+        }
+
+        .user_field {
+            padding: 0 22px;
+            display: flex;
+            align-items: center;
+            align-self: center;
+            justify-content: center;
+            cursor: pointer;
+            border-radius: 4px;
+
+            .user_msg,
+            .user_name {
+                transition: all 0.3s;
+                color: #959cb6;
+                align-self: center;
+                padding: 0 0.55rem 0 0;
+                font-weight: 500;
+                font-size: 0.9rem;
+                font-family: $main_font;
+            }
+
+            .user_name {
+                font-size: 1rem;
+                color: #6c7293;
+            }
+
+            img {
+                background: #0266b4;
+                border-radius: 60%;
+                height: 25px;
+                width: 25px;
             }
         }
     }
@@ -122,4 +159,173 @@
 .signout_menu {
     display: flex;
     flex-direction: row;
+
+    .profile_list {
+        padding: 10px 0;
+        list-style: outside none;
+
+        li {
+            cursor: pointer;
+
+            p {
+                color: #646464;
+                font-size: 15px;
+                display: block;
+                padding: 5px 15px;
+                -webkit-transition: all 0.3s ease-out;
+                -moz-transition: all 0.3s ease-out;
+                -ms-transition: all 0.3s ease-out;
+                -o-transition: all 0.3s ease-out;
+                transition: all 0.3s ease-out;
+                font-family: $main_font;
+            }
+
+            &:hover {
+                background: #6464642b;
+            }
+        }
+    }
+
+    .example-card {
+        max-width: 400px;
+        border: none;
+        animation: dropdownanimate 200ms ease-in;
+    }
+
+    .example-header-image {
+        background-image: url(../../../../assets/imges/logos/main_logo.png);
+        background-size: cover;
+    }
+}
+
+// Mail block
+.mail_block {
+    width: 350px;
+    max-width: 500px;
+    border: none;
+    padding: 0;
+    float: none;
+
+    .item-header {
+        text-align: center;
+        background-color: #2ad7c5;
+        padding: 20px 25px;
+        position: relative;
+
+        h6 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 16px;
+            font-family: $header_font;
+            font-weight: 700;
+        }
+    }
+
+    .item-content {
+        padding: 20px 25px;
+
+        .media {
+            display: flex;
+            -ms-flex-align: start;
+            align-items: flex-start;
+
+            .item-img {
+                position: relative;
+                border-radius: 50%;
+                background-color: #40dfcd;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                height: 40px;
+                width: 50px;
+
+                img {
+                    max-width: 100%;
+                    height: 35px;
+                    vertical-align: middle;
+                    border-style: none;
+                    width: 30px;
+                }
+            }
+
+            .media_body {
+                margin-left: 15px;
+
+                .media-item-title {
+                    margin-bottom: 4px;
+                    display: block;
+
+                    p {
+                        font-size: 12px;
+                    }
+
+                    .item-name {
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: #444444;
+                        display: inline-block;
+                    }
+
+                    .item-time {
+                        float: right;
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: #444444;
+                    }
+                }
+            }
+        }
+    }
+}
+
+::ng-deep .notify_menu {
+    min-width: 275px !important;
+    border: none;
+    top: 51px;
+    animation: dropdownanimate 200ms ease-in;
+
+    .item-header {
+        text-align: center;
+        background-color: #ff3131;
+        padding: 20px 25px;
+        border-radius: 4px 4px 0 0;
+        position: relative;
+        color: #ffffff;
+    }
+
+    .mat-menu-item {
+        margin-top: 15px;
+    }
+
+    .icon {
+        background: #40dfcd;
+        border-radius: 50%;
+        /* padding: 11px; */
+        padding: 13px 0;
+        text-align: center;
+
+        .mat-icon {
+            margin-right: 10px;
+            vertical-align: middle;
+            /* text-align: justify; */
+            margin-left: 10px;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+    }
+
+    .icon_content {
+        margin-left: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #444444;
+        font-family: $main_font;
+    }
+}
+
+::ng-deep .mail {
+    overflow: hidden !important;
+    border: none;
+    border-radius: 0px !important;
+    max-width: 350px !important;
 }

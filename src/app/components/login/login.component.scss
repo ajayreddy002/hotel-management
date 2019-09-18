@@ -1,3 +1,5 @@
+@import '~src/fonts.scss';
+
 .main_block {
     width: 100%;
     min-height: 100vh;
@@ -64,6 +66,7 @@
                 border-radius: 5px;
             }
         }
+<<<<<<< HEAD
     }
 }
 .btn_actions{
@@ -84,5 +87,171 @@
     }
     button + button {
         margin-left: 50px;
+=======
+
+        .btn_block {
+            text-align: center;
+            padding-top: 15px;
+
+            button {
+                padding: 8px 20px 10px 20px;
+                background: #0163a6;
+                border: none;
+                outline: none;
+                color: #fff;
+                border-radius: 5px;
+            }
+        }
+>>>>>>> 0cb660a0c26433b954d3579046f5f3ac0be0f7c1
     }
+}
+
+.main_block1 {
+    background-image: url(../../../assets/imges/icons/bg-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    .login_wraper {
+        padding: 6% 2rem 1rem 2rem;
+        margin: 0 auto 2rem auto;
+        overflow: hidden;
+
+        .login__container {
+            width: 430px;
+            margin: 0 auto;
+
+            .login__logo {
+                text-align: center;
+                margin: 0 auto 4rem auto;
+            }
+
+            .login__signin {
+                display: block;
+
+                .login__title {
+                    text-align: center;
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    color: #fff;
+                    font-family: $main_font
+                }
+
+                form {
+                    margin: 4rem auto;
+
+                    .input-group {
+                        padding: 0;
+                        margin: 0 auto;
+
+                        input {
+                            height: 46px;
+                            border-radius: 46px;
+                            border: none;
+                            padding-left: 1.5rem;
+                            padding-right: 1.5rem;
+                            margin-top: 1.5rem;
+                            background: rgba(67, 34, 167, 0.8);
+                            width: 100%;
+                            outline: none;
+                            color: $white;
+                            font-family: $main_font;
+                            font-size: 12px;
+                            font-weight: 400;
+                            &::placeholder {
+                                color: #bbabf1;
+                            }
+                        }
+
+                        .pass {
+                            margin-top: 40px;
+                        }
+                    }
+
+                    .login__extra {
+                        padding-left: 7px;
+                        padding-right: 7px;
+                        margin: 15px auto;
+                        color: rgba(255, 255, 255, 0.6);
+                        font-size: 1rem;
+                        display: flex;
+                        justify-content: space-between;
+
+                        .align-right {
+                            text-align: right;
+
+                            a {
+                                text-decoration: none;
+                                color: #bbabf1;
+                                font-family: $main_font;
+                                font-size: 13px;
+                                cursor: pointer;
+
+                                &:hover {
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+
+                    .login__actions {
+                        text-align: center;
+                        margin-top: 7%;
+
+                        button {
+                            height: 46px;
+                            display: inline-block;
+                            text-align: center;
+                            padding-left: 4rem;
+                            padding-right: 4rem;
+                            margin-top: 0.8rem;
+                            border-radius: 60px;
+                            background: transparent;
+                            color: rgba(255, 255, 255, 0.8);
+                            border: 1px solid transparent;
+                            border-color: rgba(255, 255, 255, 0.4);
+                            outline: none !important;
+                            vertical-align: middle;
+                            font-family: $main_font;
+                            font-size: 1rem;
+                            line-height: 1.5;
+
+                            &:hover {
+                                color: #fff;
+                                border-color: #fff;
+                            }
+                        }
+                    }
+                }
+
+                .sign_up_switch {
+                    text-align: center;
+                    margin-top: 2rem;
+
+                    .login__account-msg {
+                        font-size: 1.1rem;
+                        font-weight: 500;
+                        color: #bbabf1;
+                        font-family: $main_font;
+
+                        a {
+                            color: $white;
+                            font-family: $main_font;
+                            font-size: 1.1rem;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+::ng-deep .mat-checkbox .mat-checkbox-frame {
+    border: 1px solid $white;
+}
+
+::ng-deep .mat-checkbox-layout .mat-checkbox-label {
+    font-size: 13px;
+    font-family: $main_font;
+    color: #bbabf1;
 }

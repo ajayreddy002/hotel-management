@@ -1,28 +1,46 @@
 .dash_board {
     padding-top: 25px;
+
     .card_main_block {
         padding-bottom: 20px;
     }
+
     .img_block {
+        position: relative;
+        height: 85px;
+        width: 85px;
+        line-height: 85px;
+        border-radius: 50%;
+        text-align: center;
+        background-color: #d1f3e0;
         img {
-            height: 50px;
+           height: 45px;
         }
     }
+
     .content_block {
         text-align: center;
     }
+
     .card_block {
-        background: #0266b4;
+        background: #ffffff;
         cursor: pointer;
+        box-shadow: 0px 10px 20px 0px rgba(229, 229, 229, 0.75);
+        border-radius: 5px;
+        mat-card {
+            box-shadow: 0px 10px 20px 0px rgba(229, 229, 229, 0.75);
+        }
+
         mat-card-title {
-            color: #ffffff;
+            color: #111111;
             font-family: 'Open Sans', sans-serif;
             font-weight: 700;
             font-size: 25px;
             text-align: left;
         }
+
         mat-card-content {
-            color: #ffffff;
+            color: #a8a8a8;
             line-height: 20px;
             font-size: 16px;
             font-family: 'Raleway', sans-serif;

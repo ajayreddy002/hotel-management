@@ -3,7 +3,7 @@
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="!(isHandset$ | async)">
     <mat-toolbar class="logo">
-      <img src="assets/imges/logo.png" alt="">
+      <img src="assets/imges/logos/main_logo.png" alt="">
 
     </mat-toolbar>
     <!-- <mat-nav-list class="anchor_link">
@@ -63,28 +63,88 @@
       </div>
       <div class="notify_block">
         <div class="email_img">
-          <img [matMenuTriggerFor]="emailMenu" src="../../../../assets/imges/icons/mail.svg" alt="">
-        </div>
-        <div class="notify_img">
-          <img [matMenuTriggerFor]="alertMenu" src="../../../../assets/imges/icons/notification.svg" alt="">
+          <img src="assets/imges/icons/serach.svg" alt="">
         </div>
         <div class="email_img">
-          <img [matMenuTriggerFor]="signOut" src="../../../../assets/imges/icons/user.svg" alt="">
+          <img [matMenuTriggerFor]="emailMenu" src="assets/imges/icons/mail_notify.svg" alt="">
+        </div>
+        <div class="notify_img">
+          <img [matMenuTriggerFor]="alertMenu" src="assets/imges/icons/notification.svg" alt="">
+        </div>
+        <div class="user_field" [matMenuTriggerFor]="signOut">
+          <span class="user_msg">Hi, </span>
+          <span class="user_name"> Ajay </span>
+          <!-- <img [matMenuTriggerFor]="signOut" src="../../../../assets/imges/icons/user.svg" alt=""> -->
         </div>
       </div>
       <div class="menu_block">
-        <mat-menu #alertMenu="matMenu">
-          <p mat-menu-item>Alert 1</p>
-          <p mat-menu-item>Alert 1</p>
+        <mat-menu #alertMenu="matMenu" class="notify_menu">
+          <div class="item-header">
+            <h6 class="item-title">05 Messages</h6>
+          </div>
+          <p mat-menu-item><span class="icon"><mat-icon>done</mat-icon></span> <span class="icon_content">Alert 1</span></p>
+          <mat-divider></mat-divider>
+          <p mat-menu-item><span class="icon"><mat-icon>done</mat-icon></span> <span class="icon_content">Alert 1</span></p>
         </mat-menu>
-        <mat-menu #emailMenu="matMenu">
-          <p mat-menu-item>Mail from someonw</p>
-          <p mat-menu-item>Mail from someonw</p>
+        <mat-menu #emailMenu="matMenu" class="mail">
+          <div class="mail_block">
+            <div class="item-header">
+              <h6 class="item-title">05 Messages</h6>
+            </div>
+            <div class="item-content">
+              <div class="media">
+                <div class="item-img bg-skyblue author-online">
+                  <img src="../../../../assets/imges/icons/mail.svg" alt="img">
+                </div>
+                <div class="media_body">
+                  <div class="media-item-title">
+                    <a href="#">
+                      <span class="item-name">Maria Zaman</span>
+                      <span class="item-time">18:30</span>
+                    </a>
+                    <p>What is the reason of buy this item. Is it usefull for me.....</p>
+                  </div>
+                </div>
+              </div>
+              <div class="media">
+                <div class="item-img bg-skyblue author-online">
+                  <img src="../../../../assets/imges/icons/mail.svg" alt="img">
+                </div>
+                <div class="media_body">
+                  <div class="media-item-title">
+                    <a href="#">
+                      <span class="item-name">Maria Zaman</span>
+                      <span class="item-time">18:30</span>
+                    </a>
+                    <p>What is the reason of buy this item. Is it usefull for me.....</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </mat-menu>
         <mat-menu #signOut="matMenu">
           <div class="signout_menu">
-            <p mat-menu-item>Signout</p>
-            <p mat-menu-item>Profile</p>
+            <mat-card class="example-card">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title> Ajay Kumar Reddy</mat-card-title>
+                <mat-card-subtitle>School Admin</mat-card-subtitle>
+              </mat-card-header>
+              <mat-card-content>
+                <ul class="profile_list">
+                  <li>
+                    <p> My profile</p>
+                  </li>
+                  <li>
+                    <p> Account settings</p>
+                  </li>
+                  <li routerLink="/login">
+                    <p> Sign Out </p>
+                  </li>
+                </ul>
+              </mat-card-content>
+            </mat-card>
           </div>
         </mat-menu>
       </div>

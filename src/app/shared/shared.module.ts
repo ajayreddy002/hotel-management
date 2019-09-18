@@ -6,7 +6,8 @@ import {
   MatIconModule, MatSidenavModule, MatFormFieldModule, MatSelectModule, MatMenuModule,
   MatCardModule,
   MatTabsModule,
-  MatDialogModule
+  MatDialogModule,
+  MatCheckboxModule
 } from '@angular/material';
 import { AttandenceChartComponent } from './components/attandence-chart/attandence-chart.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
@@ -27,7 +28,8 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     MatCardModule,
     MatTabsModule,
     FullCalendarModule,
-    MatDialogModule
+    MatDialogModule,
+    MatCheckboxModule
   ],
   exports: [
     LayoutModule,
@@ -44,7 +46,8 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     MatTabsModule,
     AttandenceChartComponent,
     FullCalendarModule,
-    MatDialogModule
+    MatDialogModule,
+    MatCheckboxModule
   ]
 })
 export class SharedModule { }
