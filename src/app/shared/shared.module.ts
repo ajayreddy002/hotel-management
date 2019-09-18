@@ -11,6 +11,7 @@ import {
 } from '@angular/material';
 import { AttandenceChartComponent } from './components/attandence-chart/attandence-chart.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
+import { LoginService } from '../_services/loginService';
 @NgModule({
   declarations: [AttandenceChartComponent],
   imports: [
@@ -48,6 +49,9 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     FullCalendarModule,
     MatDialogModule,
     MatCheckboxModule
+  ],
+  providers: [
+    LoginService
   ]
 })
 export class SharedModule { }

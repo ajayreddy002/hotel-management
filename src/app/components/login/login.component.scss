@@ -120,7 +120,7 @@
                         padding: 0;
                         margin: 0 auto;
 
-                        input {
+                        input,textarea {
                             height: 46px;
                             border-radius: 46px;
                             border: none;
@@ -137,6 +137,9 @@
                             &::placeholder {
                                 color: #bbabf1;
                             }
+                        }
+                        textarea{
+                            resize: none;
                         }
 
                         .pass {
@@ -210,11 +213,15 @@
                         color: #bbabf1;
                         font-family: $main_font;
 
-                        a {
+                        .sign-up {
                             color: $white;
                             font-family: $main_font;
                             font-size: 1.1rem;
                             font-weight: 500;
+                            cursor: pointer;
+                            &:hover{
+                                text-decoration: underline;
+                            }
                         }
                     }
                 }
