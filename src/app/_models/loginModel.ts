@@ -6,3 +6,7 @@ password: string;
 school_address: string;
 roll: number;
 }
+export interface ILoginModel {
+email: string;
+password: string;
+}

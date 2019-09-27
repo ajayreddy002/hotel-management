@@ -7,23 +7,20 @@
             <div class="login__signin">
                 <div *ngIf="!isnewUser">
                     <h3 class="login__title">Sign In To Admin</h3>
-                    <form action="">
+                    <form [formGroup]="loginForm">
                         <div class="input-group">
-                            <input type="text" placeholder="Enter email">
+                            <input type="text" placeholder="Enter email" formControlName="email">
                         </div>
                         <div class="input-group">
-                            <input type="password" class="pass" placeholder="Enter password">
+                            <input type="password" class="pass" placeholder="Enter password" formControlName="password">
                         </div>
                         <div class="login__extra">
-                            <!-- <div class="col">
-                            <mat-checkbox class="check">Remember me</mat-checkbox>
-                        </div> -->
                             <div class="col align-right">
                                 <a>Forgot Password ?</a>
                             </div>
                         </div>
                         <div class="login__actions">
-                            <button type="button">Sign In</button>
+                            <button type="button" (click)="existingUser()">Sign In</button>
                         </div>
                     </form>
                     <div class="sign_up_switch">

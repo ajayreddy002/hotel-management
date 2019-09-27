@@ -11,6 +11,8 @@ import { LoginComponent } from './components/login/login.component';
 import { LoginService } from './_services/loginService';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthService } from './auth/auth.service';
+import { AuthGuard } from './auth/auth.guard';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   providers: [
     LoginService,
+    AuthService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

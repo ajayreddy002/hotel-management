@@ -3,6 +3,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { MenuItem, MenuServiceService, Menu } from '../../service/menu-service.service';
+import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
   selector: 'app-side-nav',
@@ -19,7 +20,8 @@ export class SideNavComponent {
 
   constructor(
     private breakpointObserver: BreakpointObserver,
-    private menuService: MenuServiceService
+    private menuService: MenuServiceService,
+    private authService: AuthService
   ) {
     this.menuList = this.menuService.getMenuList();
   }
@@ -30,5 +32,8 @@ export class SideNavComponent {
       return;
     }
     this.menuGroupSelected = menuGroup.route;
+  }
+  logout() {
+    this.authService.logout();
   }
 }
