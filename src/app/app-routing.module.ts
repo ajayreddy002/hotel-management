@@ -13,7 +13,8 @@ const routes: Routes = [
     path: 'home', component: HomeComponent, children: [
       { path: 'dashboard', loadChildren: () => import('./components/dashboard/dashboard.module').then(mod => mod.DashboardModule) },
       { path: 'calendar', loadChildren: () => import('./components/calendar/calendar.module').then(mod => mod.CalendarModule) },
-      { path: 'hrpayroll', loadChildren: () => import('./components/hrpayroll/hrpayroll.module').then(mod => mod.HrpayrollModule)}
+      { path: 'hrpayroll', loadChildren: () => import('./components/hrpayroll/hrpayroll.module').then(mod => mod.HrpayrollModule)},
+      { path: 'profile', loadChildren: () => import('./components/my-profile/my-profile.module').then(mod => mod.MyProfileModule)}
     ]
   },
 ];
