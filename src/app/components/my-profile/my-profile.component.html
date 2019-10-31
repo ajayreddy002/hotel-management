@@ -1,10 +1,18 @@
 <div class="my-profile-container">
     <div class="my-profile-details">
-        <ul>
-            <li *ngFor="let details of myprofile">
-                <h5>{{details.header}}</h5>
-                <input type="text">
-            </li>
-        </ul>
+        <h3>My Profile</h3>
+        <div class="user-details">
+            <div class="user-pic">
+                <img src="" alt="">
+            </div>
+            <div class="user-name">
+                <ul>
+                    <li *ngFor="let details of myprofile">
+                        <h5>{{details.header}}:</h5>
+                        <input type="text">
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
